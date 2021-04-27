@@ -1,0 +1,28 @@
+<html>
+<body>
+    <h3>Table detection for tabular information extraction in an image</h3>
+	<p>Upload a file which is an image containing tabular data in it</p>
+<div>
+  <form enctype="multipart/form-data" action="/predict" method="post">
+    <input type="file"  name="my_uploaded_file"/>
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+<div>
+	<p>Given Input image</p>
+    <img id="picture1" src="data:image/jpeg;base64,{{ img_data1 }}">
+</div>
+<div>
+	<p>Predicted Table Mask</p>
+    <img id="picture2" src="data:image/jpeg;base64,{{ img_data2 }}">
+</div>
+<div>
+	<p>Predicted Column Mask</p>
+    <img id="picture3" src="data:image/jpeg;base64,{{ img_data3 }}">
+</div>
+<div>
+	<p>Table Extracted from the image</p>
+    <img id="picture4" src="data:image/jpeg;base64,{{ img_data4 }}">
+</div>
+</body>
+</html>
